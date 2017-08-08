@@ -1,0 +1,68 @@
+#my-image{
+
+}
+#image-container{
+position: relative;
+text-align: center;
+}
+
+.h2 {
+    vertical-align: middle;
+    text-align: center;
+    font-size: 50px;
+}
+
+#image-text {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+#nav {
+position: fixed;
+width: 100%;
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: transparent;
+z-index: 1;
+}
+
+li {
+     float: right; 
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+     float: left; 
+}
+
+a {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+@media screen and (max-height: 690px) {
+    #image-text {
+        top: 90px !important;
+    }
+}
+
+@media screen and (max-width: 1273px) {
+    #image-text {
+        top: 90px !important;
+    }
+}
