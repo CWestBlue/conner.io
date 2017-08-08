@@ -6,6 +6,10 @@ position: relative;
 text-align: center;
 }
 
+#home {
+    position: absolute;
+}
+
 .h2 {
     vertical-align: middle;
     text-align: center;
@@ -64,5 +68,16 @@ li a:hover {
 @media screen and (max-width: 1273px) {
     #image-text {
         top: 90px !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #image-text {
+        top: 180px !important;
+    }
+    .h2 {
+        margin: 15px !important;
+        max-width: 120px !important;
+        font-size: 25px !important;
     }
 }
