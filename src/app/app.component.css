@@ -11,6 +11,26 @@ text-align: center;
     text-align: center;
     font-size: 50px;
 }
+#About {
+    padding-top: 30px;
+    margin-top: 30px;
+}
+
+.example-card {
+    height: 100% !important;
+}
+
+p {
+    font-size: 20px;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+table {
+    font-size: 20px;
+}
 
 #image-text {
     position: absolute;
@@ -32,7 +52,7 @@ background-color: transparent;
 z-index: 1;
 }
 
-li {
+#nav li {
      float: right; 
 }
 
@@ -45,10 +65,22 @@ li a {
      float: left; 
 }
 
-a {
+li a {
     display: block;
     padding: 8px;
     background-color: #dddddd;
+}
+md-card-header {
+    text-align: center;
+}
+
+ table {
+    width: 100%;
+}
+
+td, th {
+    padding: 10px;
+    text-align: center;
 }
 
 li a:hover {
@@ -60,17 +92,29 @@ li a:hover {
     #image-text {
         top: 90px !important;
     }
+    .col-xs-4 {
+        width: 100% !important;
+        float: none !important
+    }
 }
 
 @media screen and (max-width: 1273px) {
     #image-text {
         top: 90px !important;
     }
+    .col-xs-4 {
+        width: 100% !important;
+        float: none !important
+    }
 }
 
 @media screen and (max-width: 450px) {
     #image-text {
         top: 180px !important;
+    }
+    .col-xs-4 {
+        width: 100% !important;
+        float: none !important
     }
     .h2 {
         margin: 15px !important;
