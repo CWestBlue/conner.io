@@ -1,7 +1,7 @@
 <ul id="nav">
-  <li><a href="#Contact">Contact</a></li>
-  <li><a href="#About">About</a></li>
-  <li><a href="#home">Home</a></li>
+  <li><a pageScroll [pageScrollDuration]="500"  href="#Contact">Contact</a></li>
+  <li><a pageScroll [pageScrollDuration]="500"  href="#About">About</a></li>
+  <li><a pageScroll [pageScrollDuration]="500" href="#home">Home</a></li>
 </ul>
 
 <div id="home" name="home">
@@ -9,118 +9,164 @@
     <img id="my-image" align="middle" src="assets/Me.jpg">
   </div>
   <div id="image-text">
-     <h1 class="h2" style="float: left; max-width: 300px; margin: 50px"><div class="hoja">Conner West</div></h1> 
+    <h1 class="h2" style="float: left; max-width: 300px; margin: 50px">
+      <div class="hoja">Conner West</div>
+    </h1>
     <h1 class="h2" style="float: right; max-width: 300px; margin: 50px">Need A Full Stack Developer</h1>
   </div>
 </div>
 <div class="container">
-<div id="About" name="About">
-  <div class="row">
-    <div class="col-xs-4" style="height: 330px;">
-      <md-card class="example-card">
-        <md-card-header>
-          <div style="text-align: center; width: 100%">
-            BIO
-            <md-card-subtitle>
-              Conner West
-            </md-card-subtitle>
-          </div>
-        </md-card-header>
-        <md-card-content>
-          <p>
-            I've always had a connection to technology. I love to be on the edge and up to date. For only being 19 I feel like I have
-            a broad range of skills. From front end to back end development. 
-          </p>
-        </md-card-content>
-      </md-card>
+  <div id="About" name="About">
+    <div class="row">
+      <div class="col-xs-4" style="height: 420px;">
+        <md-card class="example-card">
+          <md-card-header>
+            <div style="text-align: center; width: 100%">
+              BIO
+              <md-card-subtitle>
+                Conner West
+              </md-card-subtitle>
+            </div>
+          </md-card-header>
+          <md-card-content>
+            <p>
+              I am a very determined human being. I can learn very quickly and am fairly creative. Part of my determination comes from
+              my competitiveness. I placed 1st in a weight lifting competition three years in a row. Just an example of me.
+              I love technology and anything on the edge and new. I can code from front to back end. The main thing I learned
+              is that coding/developing is not just about the languages you know or how well you can define things but about
+              your ability to adapt and catch on to the patterns. Alot of coders tend to get caught up in the details. So
+              dont let my age fool you. I am a precocious programmer.
+            </p>
+          </md-card-content>
+        </md-card>
+      </div>
+      <div class="col-xs-4" style="height: 420px;">
+        <md-card class="example-card">
+          <md-card-header>
+            <div style="text-align: center; width: 100%">
+              Education
+              <md-card-subtitle>
+                Tech Talent South / HighShool Diploma
+              </md-card-subtitle>
+            </div>
+          </md-card-header>
+          <md-card-content>
+            <p>
+              I currently just got my high school diploma. I completed a coding boot camp called <a href="https://www.techtalentsouth.com">tech talent south</a>.
+              They cover ruby, ruby on rails and html from backend to front end.
+            </p>
+          </md-card-content>
+        </md-card>
+      </div>
+      <div class="col-xs-4" style="height: 420px;">
+        <md-card class="example-card">
+          <md-card-header>
+            <div style="text-align: center; width: 100%">
+              Job Title
+              <md-card-subtitle>
+                Web Developer
+              </md-card-subtitle>
+            </div>
+          </md-card-header>
+          <md-card-content>
+            <p>
+              I currently work at <a href="http://www.bloxbuilt.com">Blox LLC</a> as a web developer. They are a manufacturing
+              company that manufacture rooms for hospitals. I am mainly developing data managment web apps for them.
+            </p>
+          </md-card-content>
+        </md-card>
+      </div>
     </div>
-    <div class="col-xs-4" style="height: 330px;">
-      <md-card class="example-card">
-        <md-card-header>
-          <div style="text-align: center; width: 100%">
-            Education
-            <md-card-subtitle>
-              Tech Talent South / HighShool Diploma
-            </md-card-subtitle>
-          </div>
-        </md-card-header>
-        <md-card-content>
-          <p>
-            I currently just got my high school diploma. 
-            I completed a coding boot camp called tech talent south. 
-            They cover ruby, ruby on rails and html from backend to front end. 
-            To find out more about them <a href="https://www.techtalentsouth.com">click here</a>.
-          </p>
-        </md-card-content>
-      </md-card>
-    </div>
-    <div class="col-xs-4" style="height: 330px;">
-      <md-card class="example-card">
-        <md-card-header>
-          <div style="text-align: center; width: 100%">
-            Job Title
-            <md-card-subtitle>
-              Web Developer
-            </md-card-subtitle>
-          </div>
-        </md-card-header>
-        <md-card-content>
-          <p>
-            I currently work at blox llc as a web developer. 
-            They are a manufacturing company that manufacture rooms for hospitals. 
-            I am mainly developing data managment web apps from backend to front end. 
-            To find out more about them <a href="http://www.bloxbuilt.com">click here</a>.
-          </p>
-        </md-card-content>
-      </md-card>
+    <div>
+      <div class="card">
+        <md-card class="example-card">
+          <md-card-header>
+            <div style="text-align: center; width: 100%">
+              My Stack
+            </div>
+          </md-card-header>
+          <md-card-content>
+            <div>
+              <table>
+                <thead>
+                  <th>Front End</th>
+                  <th>Back End</th>
+                  <th>APPs</th>
+                  <th>Cloud</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Javascript</td>
+                    <td>Nodejs</td>
+                    <td>Ionic</td>
+                    <td>Firebase</td>
+                  </tr>
+                  <tr>
+                    <td>Angular</td>
+                    <td>.net</td>
+                    <td>Electron</td>
+                    <td>Google</td>
+                  </tr>
+                  <tr>
+                    <td>Typescript</td>
+                    <td>SQL</td>
+                  </tr>
+                  <tr>
+                    <td>HTML/CSS</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </md-card-content>
+        </md-card>
+      </div>
     </div>
   </div>
-  <div>
-    <div class="card">
+  <div id="Contact" name="Contact">
+    <div style="width: 400px;">
       <md-card class="example-card">
         <md-card-header>
-          <div style="text-align: center; width: 100%">
-            My Stack
-          </div>
-        </md-card-header>
-        <md-card-content>
           <div>
-            <table>
-              <thead>
-                <th>Front End</th>
-                <th>Back End</th>
-                <th>APPs</th>
-                <th>Cloud</th>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Javascript</td>
-                  <td>Nodejs</td>
-                  <td>Ionic</td>
-                  <td>Firebase</td>
-                </tr>
-                <tr>
-                  <td>Angular</td>
-                  <td>.net</td>
-                  <td>Electron</td>
-                  <td>Google</td>
-                </tr>
-                <tr>
-                  <td>Typescript</td>
-                  <td>SQL</td>
-                </tr>
-                <tr>
-                  <td>HTML/CSS</td>
-                </tr>
-              </tbody>
+          </div>
+        </md-card-header>
+        <md-card-content>
+          <div class="content">
+            <table class="example-full-width" cellspacing="0">
+              <tr>
+                <td>
+                  <md-input-container class="example-full-width">
+                    <input mdInput placeholder="First Name">
+                  </md-input-container>
+                </td>
+                <td>
+                  <md-input-container class="example-full-width">
+                    <input mdInput placeholder="Last Name">
+                  </md-input-container>
+                </td>
+              </tr>
             </table>
+            <div style="text-align: center; font-size: 20px;">
+              <md-input-container class="example-full-width">
+                <input mdInput placeholder="Company/Organization">
+              </md-input-container>
+            </div>
           </div>
         </md-card-content>
       </md-card>
     </div>
+    <div class=" buisness-card ">
+      <md-card class="example-card">
+        <md-card-header>
+          <div>
+            <div class="hoja hoja2"></div>
+          </div>
+        </md-card-header>
+        <md-card-content>
+          <div class="content">
+            <h3> Conner West </h3> <br /> Web Developer <br /> Email: <a href="mailto:connerwest565@gmail.com">connerwest565@gmail.com</a>            <br />
+          </div>
+        </md-card-content>
+      </md-card>
+      Contact email, form: name, email, company / organisation, You need a, budget, deadline, project details, send
+    </div>
   </div>
-</div>
-<div id="Contact" name="Contact">
-  Contact email, form: name, email, company / organisation, You need a, budget, deadline, project details, send
-</div>
-</div>

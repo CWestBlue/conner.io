@@ -22,6 +22,40 @@ export class AppComponent implements OnInit {
 
   }
 
+  currentYPosition() {
+    // Firefox, Chrome, Opera, Safari
+    if (self.pageYOffset) {
+      return self.pageYOffset;
+    }
+    // Internet Explorer 6 - standards mode
+    if (document.documentElement && document.documentElement.scrollTop) {
+      return document.documentElement.scrollTop;
+    }
+    // Internet Explorer 6, 7 and 8
+    if (document.body.scrollTop) {
+      return document.body.scrollTop;
+    }
+    return 0;
+  }
+
+
+  scroll(id) {
+    const startY = this.currentYPosition();
+    const stopY = this.elmYPosition(id);
+    window.scrollTo({ left: 0, top: stopY, behavior: 'smooth'});
+  }
+
+  elmYPosition(id) {
+    const elm = document.getElementById(id);
+    console.log(elm);
+    let y = elm.offsetTop;
+    let node: any;
+    while (elm.offsetParent && elm.offsetParent !== document.body) {
+      node = elm.offsetParent;
+      y += node.offsetTop;
+    } return y;
+  }
+
   setToScreenHeight(element) {
     const windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     element.style.minHeight = String(windowHeight) + 'px';

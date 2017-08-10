@@ -21,11 +21,41 @@ text-align: center;
 }
 
 p {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .card {
     margin-top: 20px;
+}
+
+.buisness-card {
+    width: 350px;
+}
+
+.buisness-card .example-card {
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+/deep/ .buisness-card .mat-card-header-text {
+   margin: 0px !important;
+}
+
+.buisness-card .content {
+    text-align: center;
+    padding: 24px;
+    padding-top: 5px;
+}
+
+.hoja2 {
+    width: 50px !important;
+    height: 50px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    top: 0px !important;
+    left: 0px !important;
+    bottom: 0px !important;
+    margin-left: 0px !important;
 }
 
 table {
