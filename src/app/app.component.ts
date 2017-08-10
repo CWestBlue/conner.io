@@ -40,8 +40,8 @@ export class AppComponent implements OnInit {
   }
 
 
-setWritter() {
-      this.TxtType.prototype.tick = function () {
+  setWritter() {
+    this.TxtType.prototype.tick = function () {
       const i = this.loopNum % this.toRotate.length;
       const fullTxt = this.toRotate[i];
 
@@ -71,7 +71,7 @@ setWritter() {
         that.tick();
       }, delta);
     };
-}
+  }
   windowOnLoad() {
     const elements = document.getElementsByClassName('typewrite');
     for (let i = 0; i < elements.length; i++) {
