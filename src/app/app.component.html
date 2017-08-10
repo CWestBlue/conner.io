@@ -1,6 +1,6 @@
 <ul id="nav">
-  <li><a pageScroll [pageScrollDuration]="500"  href="#Contact">Contact</a></li>
-  <li><a pageScroll [pageScrollDuration]="500"  href="#About">About</a></li>
+  <li><a (click)="openDialog()">Contact</a></li>
+  <li><a pageScroll [pageScrollDuration]="500" href="#About">About</a></li>
   <li><a pageScroll [pageScrollDuration]="500" href="#home">Home</a></li>
 </ul>
 
@@ -12,7 +12,11 @@
     <h1 class="h2" style="float: left; max-width: 300px; margin: 50px">
       <div class="hoja">Conner West</div>
     </h1>
-    <h1 class="h2" style="float: right; max-width: 300px; margin: 50px">Need A Full Stack Developer</h1>
+    <h1 class="h2" style="float: right; max-width: 300px; margin: 50px; color: black">
+      <a style="color: black" href="" class="typewrite" data-period="2000" data-type='[ "Need A Full Stack Developer.", "Need A Website To Fit Your Needs", "Need An API To Manager Data Flow", "Simply Just Needing A Programmer To Hire", "I Can Do It" ]'>
+      <span class="wrap"></span>
+      </a>
+    </h1>
   </div>
 </div>
 <div class="container">
@@ -35,7 +39,7 @@
               I love technology and anything on the edge and new. I can code from front to back end. The main thing I learned
               is that coding/developing is not just about the languages you know or how well you can define things but about
               your ability to adapt and catch on to the patterns. Alot of coders tend to get caught up in the details. So
-              dont let my age fool you. I am a precocious programmer.
+              dont let my age fool you. I am a precocious programmer. <a style="cursor: pointer" (click)="openDialog()">Get in touch?</a>
             </p>
           </md-card-content>
         </md-card>
@@ -123,50 +127,8 @@
     </div>
   </div>
   <div id="Contact" name="Contact">
-    <div style="width: 400px;">
-      <md-card class="example-card">
-        <md-card-header>
-          <div>
-          </div>
-        </md-card-header>
-        <md-card-content>
-          <div class="content">
-            <table class="example-full-width" cellspacing="0">
-              <tr>
-                <td>
-                  <md-input-container class="example-full-width">
-                    <input mdInput placeholder="First Name">
-                  </md-input-container>
-                </td>
-                <td>
-                  <md-input-container class="example-full-width">
-                    <input mdInput placeholder="Last Name">
-                  </md-input-container>
-                </td>
-              </tr>
-            </table>
-            <div style="text-align: center; font-size: 20px;">
-              <md-input-container class="example-full-width">
-                <input mdInput placeholder="Company/Organization">
-              </md-input-container>
-            </div>
-          </div>
-        </md-card-content>
-      </md-card>
-    </div>
-    <div class=" buisness-card ">
-      <md-card class="example-card">
-        <md-card-header>
-          <div>
-            <div class="hoja hoja2"></div>
-          </div>
-        </md-card-header>
-        <md-card-content>
-          <div class="content">
-            <h3> Conner West </h3> <br /> Web Developer <br /> Email: <a href="mailto:connerwest565@gmail.com">connerwest565@gmail.com</a>            <br />
-          </div>
-        </md-card-content>
-      </md-card>
-      Contact email, form: name, email, company / organisation, You need a, budget, deadline, project details, send
-    </div>
+    <h1>
+
+    </h1>
   </div>
+</div>

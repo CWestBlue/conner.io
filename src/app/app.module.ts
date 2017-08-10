@@ -7,14 +7,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdCardModule } from '@angular/material';
 import { MdListModule } from '@angular/material';
 import { MdInputModule } from '@angular/material';
+import { MdSelectModule } from '@angular/material';
+import { MdDialogModule } from '@angular/material';
 
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
+import { DatepickerModule } from 'ngx-bootstrap/datepicker';
+
 import { AppComponent } from './app.component';
+import { ContactDialogComponent } from './contact-dialog.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContactDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -24,9 +30,15 @@ import { AppComponent } from './app.component';
     MdCardModule,
     MdListModule,
     MdInputModule,
-    Ng2PageScrollModule
+    Ng2PageScrollModule,
+    DatepickerModule.forRoot(),
+    MdSelectModule,
+    MdDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    ContactDialogComponent
+  ]
 })
 export class AppModule { }
