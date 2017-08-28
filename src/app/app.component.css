@@ -149,6 +149,24 @@ li a:hover {
         width: 100% !important;
         float: none !important
     }
+    .hoja {
+        top: 50% !important;
+        left: 50% !important;
+        margin-left: -70px !important;
+        margin-top: -70px !important;
+        width: 150px !important;
+        height: 150px !important;
+        font-size: 15px !important;
+        line-height: 150px !important;
+    }
+    .h2 {
+        /* margin: 15px !important; */
+        font-size: 55px !important;
+        max-width: 90px !important;
+    }
+    .hoja-h2 {
+        margin-top: -101px !important;
+    }
 }
 
 @media screen and (max-width: 1273px) {
@@ -169,9 +187,35 @@ li a:hover {
         width: 100% !important;
         float: none !important
     }
+     .hoja {
+        top: 50% !important;
+        left: 50% !important;
+        margin-left: -70px !important;
+        margin-top: -70px !important;
+        width: 150px !important;
+        height: 150px !important;
+        font-size: 15px !important;
+        line-height: 150px !important;
+    }
     .h2 {
-        margin: 15px !important;
-        max-width: 120px !important;
-        font-size: 25px !important;
+        /* margin: 15px !important; */
+        max-width: 55px !important;
+        font-size: 20px !important;
+        margin-right: 73px !important;
+    }
+    .hoja-h2 {
+        margin-top: -101px !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .h2 {
+        /* margin: 15px !important; */
+        max-width: 55px !important;
+        font-size: 20px !important;
+    }
+    .hoja-h2 {
+        margin-top: -101px !important;
+        margin-left: 50px !important;
     }
 }

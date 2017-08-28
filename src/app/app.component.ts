@@ -24,6 +24,7 @@ export class AppComponent implements OnInit {
     this.setToScreenHeight(document.getElementById('my-image'));
     this.setToScreenWidth(document.getElementById('my-image'));
     this.setToScreenHeight(document.getElementById('About'));
+    this.setToScreenWidth(document.getElementById('image-text'));
     // this.setToScreenHeight(document.getElementById('Contact'));
   }
 
@@ -32,6 +33,7 @@ export class AppComponent implements OnInit {
     this.setToScreenHeight(document.getElementById('my-image'));
     this.setToScreenWidth(document.getElementById('my-image'));
     this.setToScreenHeight(document.getElementById('About'));
+    this.setToScreenWidth(document.getElementById('image-text'));
     this.setWritter();
     this.windowOnLoad();
 
