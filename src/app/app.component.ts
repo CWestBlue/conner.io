@@ -1,6 +1,13 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, AfterViewInit } from '@angular/core';
 import { MdDialog } from '@angular/material';
 import { ContactDialogComponent } from './contact-dialog.component';
+import { MdIconRegistry } from '@angular/material';
+import { DomSanitizer } from '@angular/platform-browser';
+// import * as ScrollMagic from 'scrollmagic';
+
+declare const TweenLite: any;
+
+declare const ScrollMagic: any;
 
 
 @Component({
@@ -8,9 +15,10 @@ import { ContactDialogComponent } from './contact-dialog.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
   title = 'app works!';
   selectedOption: any;
+  controller = new ScrollMagic.Controller();
   TxtType = function (el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -28,7 +36,13 @@ export class AppComponent implements OnInit {
     // this.setToScreenHeight(document.getElementById('Contact'));
   }
 
-  constructor(public dialog: MdDialog) { }
+  constructor(public dialog: MdDialog, private register: MdIconRegistry, private domSanitizer: DomSanitizer) {
+    register.addSvgIcon('firebase', domSanitizer.bypassSecurityTrustResourceUrl('assets/firebase.svg'));
+    register.addSvgIcon('ionic', domSanitizer.bypassSecurityTrustResourceUrl('assets/ionic.svg'));
+    register.addSvgIcon('nodejs', domSanitizer.bypassSecurityTrustResourceUrl('assets/nodejs.svg'));
+    register.addSvgIcon('electron', domSanitizer.bypassSecurityTrustResourceUrl('assets/electron.svg'));
+    // register('angular', domSanitizer.bypassSecurityTrustResourceUrl(''));
+   }
   ngOnInit() {
     this.setToScreenHeight(document.getElementById('my-image'));
     this.setToScreenWidth(document.getElementById('my-image'));
@@ -36,11 +50,28 @@ export class AppComponent implements OnInit {
     this.setToScreenWidth(document.getElementById('image-text'));
     this.setWritter();
     this.windowOnLoad();
+    console.log(ScrollMagic);
 
     // this.setToScreenHeight(document.getElementById('Contact'));
 
   }
 
+  ngAfterViewInit() {
+    const bio = document.getElementById('BIO');
+    const education = document.getElementById('Education');
+    // const bioTween = new TweenLite.from(bio, 1.5, { right: 500 });
+    // const educationTween = new TweenLite.from(education, 1.5, { opacity: 0 });
+    // new ScrollMagic.Scene({
+    //   triggerElement: '#About'
+    // })
+    //   .setTween(bioTween)
+    //   .addTo(this.controller);
+    // new ScrollMagic.Scene({
+    //   triggerElement: '#About'
+    // })
+    // .setTween(educationTween)
+    // .addTo(this.controller);
+  }
 
   setWritter() {
     this.TxtType.prototype.tick = function () {
@@ -110,35 +141,16 @@ export class AppComponent implements OnInit {
     return 0;
   }
 
-
-  scroll(id) {
-    const startY = this.currentYPosition();
-    const stopY = this.elmYPosition(id);
-    window.scrollTo({ left: 0, top: stopY, behavior: 'smooth' });
-  }
-
-  elmYPosition(id) {
-    const elm = document.getElementById(id);
-    console.log(elm);
-    let y = elm.offsetTop;
-    let node: any;
-    while (elm.offsetParent && elm.offsetParent !== document.body) {
-      node = elm.offsetParent;
-      y += node.offsetTop;
-    } return y;
-  }
-
   setToScreenHeight(element: HTMLElement) {
     const windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    element.style.height = String(windowHeight + 'px');
     element.style.minHeight = String(windowHeight) + 'px';
-    if (element.id === 'my-image') {
-      element.style.maxHeight = String(windowHeight) + 'px';
-    }
   }
 
   setToScreenWidth(element) {
     const windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    element.style.minWidth = String(windowWidth) + 'px';
-    element.style.maxWidth = String(windowWidth) + 'px';
+    // element.style.minWidth = String(windowWidth) + 'px';
+    element.style.width = String(windowWidth + 'px');
+    // element.style.maxWidth = String(windowWidth) + 'px';
   }
 }

@@ -9,6 +9,7 @@ import { MdListModule } from '@angular/material';
 import { MdInputModule } from '@angular/material';
 import { MdSelectModule } from '@angular/material';
 import { MdDialogModule } from '@angular/material';
+import { MdIconModule, MdIconRegistry } from '@angular/material';
 
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
@@ -33,9 +34,10 @@ import { ContactDialogComponent } from './contact-dialog.component';
     Ng2PageScrollModule,
     DatepickerModule.forRoot(),
     MdSelectModule,
-    MdDialogModule
+    MdDialogModule,
+    MdIconModule
   ],
-  providers: [],
+  providers: [MdIconRegistry],
   bootstrap: [AppComponent],
   entryComponents: [
     ContactDialogComponent
